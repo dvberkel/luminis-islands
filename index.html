@@ -29,11 +29,11 @@
 		<div id="islands-raphael"></div>
 		<script>
 			var paper = Raphael("islands-raphael", 640, 480);
-			var background = paper.rect(0,0,640,480).attr("fill", "gray");
+			var background = paper.rect(0,0,640,480).attr({fill: "gray", stroke: "none"});
 			
 			var path = paper.path("M60,240C60,400,580,400,580,240C580,80,60,80,60,240,Z");
 			
-			var orb = paper.circle(60,240,50).attr("fill","orange");
+			var orb = paper.circle(60,240,50).attr({fill: "orange", stroke: "none"});
 			
 			function animateScene() {
 				orb.animateAlong(path,10000);
