@@ -31,7 +31,16 @@
 			var paper = Raphael("islands-raphael", 640, 480);
 			var background = paper.rect(0,0,640,480).attr("fill", "gray");
 			
+			var path = paper.path("M60,240C60,400,580,400,580,240C580,80,60,80,60,240,Z");
+			
 			var orb = paper.circle(60,240,50).attr("fill","orange");
+			
+			function animateScene() {
+				orb.animateAlong(path,10000);
+			}
+			
+			animateScene();
+			setInterval("animateScene()",10000);
 		</script>
 		<h2>Miscellaneous</h2>
 		<table>
