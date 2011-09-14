@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Luminis &raquo; Islands Prototype &raquo; SVG</title>
+		<script src="js/raphael-min.js"></script>
 	</head>
 	<body>
 		<h1>Islands Prototype</h1>
@@ -24,6 +25,14 @@
 			<path d="M60 240 C60 400 580 400 580 240 C580 80 60 80 60 240 Z" stroke="black" fill="none"/>
 			<circle id="island-javascript" cx="60" cy="240" r="50" fill="orange"/>
 		</svg>
+		<h3>Rapha&euml;l</h3>
+		<div id="islands-raphael"></div>
+		<script>
+			var paper = Raphael("islands-raphael", 640, 480);
+			var background = paper.rect(0,0,640,480).attr("fill", "gray");
+			
+			var orb = paper.circle(60,240,50).attr("fill","orange");
+		</script>
 		<h2>Miscellaneous</h2>
 		<table>
 			<thead>
