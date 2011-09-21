@@ -21,7 +21,7 @@
 			</defs>
 			<rect x="0" y="0" width="640" height="480" fill="none" stroke="black"/>
 			<path d="M60 240 C60 400 580 400 580 240 C580 80 60 80 60 240 Z" stroke="black" fill="none"/>
-			<circle id="island-smil" cx="0" cy="0" r="50" fill="url(#grad1)">
+			<circle id="island-smil" cx="0" cy="0" r="50" fill="url(#grad1)" onclick="alert('Island clicked')">
 				<animateMotion path="M60 240 C60 400 580 400 580 240 C580 80 60 80 60 240 Z" dur="10s" repeatCount="indefinite"/>
 			</circle>
 		</svg>
@@ -34,6 +34,7 @@
 			var path = paper.path("M60,240C60,400,580,400,580,240C580,80,60,80,60,240,Z");
 			
 			var orb = paper.circle(60,240,50).attr({fill: "r(0.1,0.1)#ccc:0-#333:120", stroke: "none"});
+			orb.node.onclick = function() { alert('Island clicked') };
 			
 			function animateScene() {
 				orb.animateAlong(path,10000);
